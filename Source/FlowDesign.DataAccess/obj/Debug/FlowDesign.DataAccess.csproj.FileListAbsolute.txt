@@ -1,0 +1,7 @@
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.DataAccess\bin\Debug\FlowDesign.DataAccess.dll
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.DataAccess\bin\Debug\FlowDesign.DataAccess.pdb
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.DataAccess\bin\Debug\FlowDesign.Model.dll
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.DataAccess\bin\Debug\FlowDesign.Model.pdb
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.DataAccess\obj\Debug\FlowDesign.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.DataAccess\obj\Debug\FlowDesign.DataAccess.dll
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.DataAccess\obj\Debug\FlowDesign.DataAccess.pdb

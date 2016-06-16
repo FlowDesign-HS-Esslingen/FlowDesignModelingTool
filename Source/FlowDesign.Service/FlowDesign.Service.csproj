@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA0BD7A3-3359-418F-AFE4-F7E5A7AC6389}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlowDesign.Service</RootNamespace>
+    <AssemblyName>FlowDesign.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ApplicationService.cs" />
+    <Compile Include="ComponentServices\CommonComponentService.cs" />
+    <Compile Include="ComponentServices\CommonComponentTypes.cs" />
+    <Compile Include="ComponentServices\FlowViewComponentService.cs" />
+    <Compile Include="ComponentServices\NullComponentService.cs" />
+    <Compile Include="ComponentServices\PrototypeCompService.cs" />
+    <Compile Include="ComponentServices\SystemEnvCompService.cs" />
+    <Compile Include="DiagramFactory.cs" />
+    <Compile Include="Diagrams\Flow\FlowViewDiagramFactory.cs" />
+    <Compile Include="Diagrams\Flow\PrototypeDiagramFactory.cs" />
+    <Compile Include="Diagrams\Flow\SystemEnvDiagramFactory.cs" />
+    <Compile Include="FlowDesignServices.cs" />
+    <Compile Include="ComponentServices\IComponentService.cs" />
+    <Compile Include="Diagrams\IDiagramStrategy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlowDesign.DataAccess\FlowDesign.DataAccess.csproj">
+      <Project>{a23f0661-ef3b-4249-bcd4-0bc07d94a546}</Project>
+      <Name>FlowDesign.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlowDesign.Model\FlowDesign.Model.csproj">
+      <Project>{2a16dfaf-ac7d-404e-9a7b-e3e880debc11}</Project>
+      <Name>FlowDesign.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

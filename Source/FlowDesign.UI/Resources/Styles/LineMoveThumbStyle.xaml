@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:FlowDesign.UI.Controls.Components">
+
+    <ControlTemplate x:Key="LineMoveThumbTemplate" TargetType="{x:Type local:LineMoveThumb}">
+
+        <Border Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}"
+                Background="White"
+                BorderBrush="{DynamicResource Main}"
+                BorderThickness="2"
+                Cursor="SizeAll" />
+    </ControlTemplate>
+
+    <!--  Style fuer die Thumbs links, rechts, oben und unten  -->
+    <Style x:Key="LineMoveThumbStyle" TargetType="{x:Type local:LineMoveThumb}">
+        <Setter Property="Margin" Value="-3" />
+        <Setter Property="Background" Value="{DynamicResource Main}" />
+        <Setter Property="Template" Value="{DynamicResource LineMoveThumbTemplate}" />
+    </Style>
+
+</ResourceDictionary>

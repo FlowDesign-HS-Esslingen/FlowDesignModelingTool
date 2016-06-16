@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="FlowDesign.UI.Controls.CompositeControls.DiagramLayerHistoryControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:FlowDesign.UI.Controls.CompositeControls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:model="clr-namespace:FlowDesign.Model.Flow;assembly=FlowDesign.Model"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+    <Border BorderBrush="{DynamicResource DarkBackgroundLightFill}" BorderThickness="1 0 0 0">
+        <StackPanel>
+            <TextBlock Background="{DynamicResource BackgroundFill}"
+                       Foreground="{DynamicResource ButtonText}"
+                       Padding="10">
+                Flow Ebenen History
+            </TextBlock>
+            <ItemsControl MinWidth="150"
+                          Background="{DynamicResource DarkBackgroundLightFill}"
+                          ItemsSource="{Binding FlowLayers}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel IsItemsHost="True" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.Resources>
+
+                    <DataTemplate DataType="{x:Type model:FlowViewDiagram}">
+                        <Label Content="{Binding Name}" MouseDoubleClick="Label_MouseDoubleClick" />
+                    </DataTemplate>
+                </ItemsControl.Resources>
+            </ItemsControl>
+
+        </StackPanel>
+    </Border>
+</UserControl>

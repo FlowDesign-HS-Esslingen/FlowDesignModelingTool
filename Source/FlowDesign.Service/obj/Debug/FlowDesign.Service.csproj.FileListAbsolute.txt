@@ -1,0 +1,18 @@
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Service\bin\Debug\FlowDesign.Service.dll
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Service\bin\Debug\FlowDesign.Service.pdb
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Service\bin\Debug\FlowDesign.DataAccess.dll
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Service\bin\Debug\FlowDesign.Model.dll
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Service\bin\Debug\FlowDesign.DataAccess.pdb
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Service\bin\Debug\FlowDesign.Model.pdb
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Service\obj\Debug\FlowDesign.Service.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Service\obj\Debug\FlowDesign.Service.dll
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Service\obj\Debug\FlowDesign.Service.pdb
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.Service\bin\Debug\FlowDesign.Service.dll
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.Service\bin\Debug\FlowDesign.Service.pdb
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.Service\bin\Debug\FlowDesign.DataAccess.dll
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.Service\bin\Debug\FlowDesign.Model.dll
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.Service\bin\Debug\FlowDesign.DataAccess.pdb
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.Service\bin\Debug\FlowDesign.Model.pdb
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.Service\obj\Debug\FlowDesign.Service.csprojResolveAssemblyReference.cache
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.Service\obj\Debug\FlowDesign.Service.dll
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.Service\obj\Debug\FlowDesign.Service.pdb

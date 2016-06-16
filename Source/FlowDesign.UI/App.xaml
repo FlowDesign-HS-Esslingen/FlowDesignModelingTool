@@ -1,0 +1,29 @@
+﻿<Application x:Class="FlowDesign.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FlowDesign.UI"
+             xmlns:windows="clr-namespace:FlowDesign.UI.Windows"
+             Startup="Application_Startup"
+             StartupUri="Windows/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary x:Name="ImageButton" Source="Controls/Buttons/ImageButton.xaml" />
+                <ResourceDictionary x:Name="DiagramToolbarButton" Source="Controls/Buttons/DiagramToolbarButton.xaml" />
+                <ResourceDictionary x:Name="ToolBoxItem" Source="Controls/Items/ComponentToolBoxItem.xaml" />
+
+                <ResourceDictionary x:Name="ComponentContainer" Source="Controls/Components/ComponentContainerControl.xaml" />
+
+                <ResourceDictionary x:Name="MenuBar" Source="Resources/Styles/MenuBarStyle.xaml" />
+                <ResourceDictionary x:Name="TextBox" Source="Resources/Styles/TextBoxStyle.xaml" />
+                <ResourceDictionary x:Name="Button" Source="Resources/Styles/ButtonStyle.xaml" />
+                <ResourceDictionary x:Name="LineMoveThumb" Source="Resources/Styles/LineMoveThumbStyle.xaml" />
+                <ResourceDictionary x:Name="MoveThumb" Source="Resources/Styles/MoveThumbStyle.xaml" />
+                <ResourceDictionary x:Name="ResizeThumb" Source="Resources/Styles/ResizeThumbStyle.xaml" />
+                <ResourceDictionary x:Name="Connector" Source="Resources/Styles/ConnectorStyle.xaml" />
+
+                <ResourceDictionary x:Name="ColorTheme" Source="Resources/ColorThemes/LightColorTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

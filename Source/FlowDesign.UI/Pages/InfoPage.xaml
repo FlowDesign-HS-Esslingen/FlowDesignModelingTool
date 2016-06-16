@@ -1,0 +1,43 @@
+﻿<Page x:Class="FlowDesign.UI.Pages.InfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:FlowDesign.UI.Pages"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:viewModels="clr-namespace:FlowDesign.UI.ViewModels"
+      Title="InfoPage"
+      d:DesignHeight="300"
+      d:DesignWidth="300"
+      mc:Ignorable="d">
+    <Page.DataContext>
+        <viewModels:InfoPageViewModel />
+    </Page.DataContext>
+
+    <DockPanel>
+        <StackPanel Margin="40" DockPanel.Dock="Top">
+            <TextBlock Margin="0 0 0 10"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Foreground="{DynamicResource TextHeading}"
+                       Text="Willkommen bei Flow Design" />
+            <TextBlock FontSize="16"
+                       Foreground="{DynamicResource TextBody}"
+                       Text="{Binding EinleitungsText}"
+                       TextWrapping="WrapWithOverflow" />
+        </StackPanel>
+
+        <Grid DockPanel.Dock="Top">
+            <StackPanel Margin="40">
+                <TextBlock Margin="0 0 0 10"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource TextHeading}"
+                           Text="Neuigkeiten" />
+                <TextBlock FontSize="16"
+                           Foreground="{DynamicResource TextBody}"
+                           Text="{Binding NeuigkeitenText}"
+                           TextWrapping="WrapWithOverflow" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Page>

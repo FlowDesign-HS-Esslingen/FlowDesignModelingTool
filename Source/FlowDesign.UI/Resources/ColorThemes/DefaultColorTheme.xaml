@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--  Hauptfarbe des Logos  -->
+    <SolidColorBrush x:Key="Main" Color="#D6E5FA" />
+    <SolidColorBrush x:Key="Highlighted" Color="#C0C3C6" />
+
+    <!--  Dark Background Farben  -->
+    <SolidColorBrush x:Key="DarkBackground" Color="#F2F5F9" />
+    <SolidColorBrush x:Key="DarkBackgroundFill" Color="#D6E5FA" />
+    <SolidColorBrush x:Key="DarkBackgroundLightFill" Color="#C0C3C6" />
+
+
+    <SolidColorBrush x:Key="BackgroundFill" Color="#4B73A9" />
+    <SolidColorBrush x:Key="WorkBackground" Color="#C0C3C6" />
+
+    <!--  Mouse Hover  -->
+    <SolidColorBrush x:Key="HoverBlue" Color="#C0C3C6" />
+
+    <!--  Text Farben  -->
+    <SolidColorBrush x:Key="TextHeading" Color="#4B73A9" />
+    <SolidColorBrush x:Key="TextBody" Color="#5D5E60" />
+    <SolidColorBrush x:Key="ButtonText" Color="#f5f5f5" />
+
+    <!--  StatusBar Farben  -->
+    <SolidColorBrush x:Key="Info" Color="#4B73A9" />
+    <SolidColorBrush x:Key="Success" Color="#A7175415" />
+    <SolidColorBrush x:Key="Danger" Color="#BC8A331F" />
+</ResourceDictionary>

@@ -1,0 +1,125 @@
+﻿<Page x:Class="FlowDesign.UI.Pages.StartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:buttons="clr-namespace:FlowDesign.UI.Controls.Buttons"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:FlowDesign.UI.Pages"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:models="clr-namespace:FlowDesign.Model;assembly=FlowDesign.Model"
+      xmlns:seperators="clr-namespace:FlowDesign.UI.Controls.Seperator"
+      xmlns:viewModels="clr-namespace:FlowDesign.UI.ViewModels"
+      Title="StartPage"
+      d:DesignHeight="1024"
+      d:DesignWidth="768"
+      mc:Ignorable="d">
+    <Page.DataContext>
+        <viewModels:StartPageViewModel />
+    </Page.DataContext>
+
+    <DockPanel>
+        <StackPanel MinWidth="300"
+                    Background="{DynamicResource DarkBackground}"
+                    DockPanel.Dock="Left">
+            <!--  Logo links oben  -->
+            <StackPanel Margin="20"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                <Image Width="80"
+                       Height="80"
+                       RenderOptions.BitmapScalingMode="Fant"
+                       Source="../Resources/Images/Logos/flowLogo.png"
+                       Stretch="UniformToFill" />
+                <TextBlock Margin="10 0 0 0"
+                           VerticalAlignment="Center"
+                           FontSize="26"
+                           Foreground="{DynamicResource TextHeading}"><Run Text="FLOW" />
+                    <LineBreak /><Run Text="DESIGN" /></TextBlock>
+            </StackPanel>
+
+            <seperators:InsetSeperator Margin="10 0 10 0"
+                                       DarkPartBackground="{DynamicResource DarkBackgroundFill}"
+                                       DarkPartHeight="2"
+                                       LightPartBackground="{DynamicResource DarkBackgroundLightFill}" />
+
+            <!--  Starten  -->
+            <Grid Margin="0 10 0 10">
+                <StackPanel>
+                    <TextBlock Margin="30 0 0 0"
+                               FontSize="16"
+                               FontWeight="Bold"
+                               Foreground="{DynamicResource TextHeading}"
+                               Text="Starten" />
+                    <buttons:ImageButton BorderHighlightedColor="{DynamicResource Main}"
+                                         Click="NewProjectButton_Clicked"
+                                         Content="NEUES PROJEKT"
+                                         ContentMargin="30 5 0 5"
+                                         FontWeight="Bold"
+                                         Foreground="{DynamicResource TextHeading}"
+                                         HighlightedColor="{DynamicResource Highlighted}"
+                                         IconSource="{DynamicResource IconNewProject}"
+                                         TextMargin="20 0 0 0" />
+                    <buttons:ImageButton BorderHighlightedColor="{DynamicResource Main}"
+                                         Click="LoadProjectButton_Clicked"
+                                         Content="PROJEKT ÖFFNEN"
+                                         ContentMargin="30 5 0 5"
+                                         FontWeight="Bold"
+                                         Foreground="{DynamicResource TextHeading}"
+                                         HighlightedColor="{DynamicResource Highlighted}"
+                                         IconSource="{DynamicResource IconOpenProject}"
+                                         TextMargin="20 0 0 0" />
+
+                </StackPanel>
+            </Grid>
+
+            <seperators:InsetSeperator Margin="10 0 10 0"
+                                       DarkPartBackground="{DynamicResource DarkBackgroundFill}"
+                                       DarkPartHeight="2"
+                                       LightPartBackground="{DynamicResource DarkBackgroundLightFill}" />
+
+            <TextBlock Margin="30 10 0 0"
+                       FontSize="16"
+                       FontWeight="Bold"
+                       Foreground="{DynamicResource TextHeading}"
+                       Text="Zuletzt" />
+
+            <!--  Zuletzt geöffnet  -->
+            <!--  TODO (JS): Databinding  -->
+            <ItemsControl ItemsSource="{Binding RecentlyOpenedProjects}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Margin="0 10 0 10" Orientation="Vertical">
+                            <StackPanel.Resources>
+                                <DataTemplate DataType="{x:Type models:RecentlyUsedProject}">
+                                    <buttons:ImageButton BorderHighlightedColor="{DynamicResource Main}"
+                                                         Command="{Binding DataContext.LoadProjectCommand,
+                                                                           RelativeSource={RelativeSource FindAncestor,
+                                                                                                          AncestorType={x:Type ItemsControl}}}"
+                                                         CommandParameter="{Binding Filepath}"
+                                                         Content="{Binding Name}"
+                                                         ContentMargin="30 5 0 5"
+                                                         FontSize="14"
+                                                         FontWeight="Bold"
+                                                         Foreground="{DynamicResource TextHeading}"
+                                                         HighlightedColor="{DynamicResource Highlighted}"
+                                                         IconSource="../Resources/Images/Logos/flowLogo_Small.png"
+                                                         TextMargin="20 0 0 0" />
+                                </DataTemplate>
+                            </StackPanel.Resources>
+                        </StackPanel>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+
+        <Rectangle Width="2"
+                   DockPanel.Dock="Left"
+                   Fill="{DynamicResource DarkBackgroundFill}" />
+
+        <Frame x:Name="startPageFrame"
+               Background="{DynamicResource DarkBackground}"
+               DockPanel.Dock="Right"
+               NavigationUIVisibility="Hidden" />
+
+        <!--  Panel rechts  -->
+    </DockPanel>
+</Page>

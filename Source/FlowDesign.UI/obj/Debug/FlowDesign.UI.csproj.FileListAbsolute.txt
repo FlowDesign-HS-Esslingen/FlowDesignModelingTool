@@ -1,0 +1,119 @@
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\bin\Debug\FlowDesign.UI.exe.config
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\bin\Debug\FlowDesign.UI.exe
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\bin\Debug\FlowDesign.UI.pdb
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\bin\Debug\FlowDesign.DataAccess.dll
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\bin\Debug\FlowDesign.Model.dll
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\bin\Debug\FlowDesign.Service.dll
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\bin\Debug\FlowDesign.DataAccess.pdb
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\bin\Debug\FlowDesign.Model.pdb
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\bin\Debug\FlowDesign.Service.pdb
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\FlowDesign.UI.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Resources\ColorThemes\DefaultColorTheme.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Resources\Styles\MenuBarStyle.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\Seperator\InsetSeperator.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Pages\MainDiagramPage.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Pages\StartPage.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Windows\MainWindow.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\App.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\FlowDesign.UI_MarkupCompile.cache
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\FlowDesign.UI_MarkupCompile.lref
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\App.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\Buttons\ImageButton.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\Seperator\InsetSeperator.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Pages\MainDiagramPage.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Pages\StartPage.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\Buttons\DiagramToolbarButton.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Windows\MainWindow.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\FlowDesign.UI.g.resources
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\FlowDesign.UI.Properties.Resources.resources
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\FlowDesign.UI.csproj.GenerateResource.Cache
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\FlowDesign.UI.exe
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\FlowDesign.UI.pdb
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Resources\Styles\TextBoxStyle.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\CompositeControls\CreateProjectControl.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\CompositeControls\CreateProjectControl.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Resources\ColorThemes\LightColorTheme.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Resources\Styles\ButtonStyle.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Pages\CreateProjectPage.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Pages\InfoPage.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Pages\CreateProjectPage.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Pages\InfoPage.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\CompositeControls\DiagramComponentsControl.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\CompositeControls\DiagramLayerHistoryControl.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\CompositeControls\DiagramToolBarControl.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\CompositeControls\DiagramComponentsControl.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\CompositeControls\DiagramLayerHistoryControl.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\CompositeControls\DiagramToolBarControl.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\Components\CommentControl.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\Items\ComponentToolBoxItem.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\Components\ComponentContainerControl.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\Components\SystemControl.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Resources\ColorThemes\DarkColorTheme.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\Components\CommentControl.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Controls\Components\SystemControl.g.cs
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Resources\Styles\ConnectorStyle.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Resources\Styles\LineMoveThumbStyle.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Resources\Styles\MoveThumbStyle.baml
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.UI\obj\Debug\Resources\Styles\ResizeThumbStyle.baml
+C:\Users\Daniel\Desktop\Für Schmidt\Source\FlowDesign.UI\bin\Debug\FlowDesign.UI.exe.config
+C:\Users\Daniel\Desktop\Für Schmidt\Source\FlowDesign.UI\obj\Debug\FlowDesign.UI.exe
+C:\Users\Daniel\Desktop\Für Schmidt\Source\FlowDesign.UI\obj\Debug\FlowDesign.UI.pdb
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\bin\Debug\FlowDesign.UI.exe.config
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\FlowDesign.UI.exe
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\FlowDesign.UI.pdb
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\bin\Debug\FlowDesign.UI.exe
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\bin\Debug\FlowDesign.UI.pdb
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\bin\Debug\FlowDesign.DataAccess.dll
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\bin\Debug\FlowDesign.Model.dll
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\bin\Debug\FlowDesign.Service.dll
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\bin\Debug\FlowDesign.DataAccess.pdb
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\bin\Debug\FlowDesign.Model.pdb
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\bin\Debug\FlowDesign.Service.pdb
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\FlowDesign.UI.csprojResolveAssemblyReference.cache
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Resources\ColorThemes\DarkColorTheme.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Resources\ColorThemes\DefaultColorTheme.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Resources\ColorThemes\LightColorTheme.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Resources\Styles\ButtonStyle.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Resources\Styles\MenuBarStyle.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Resources\Styles\TextBoxStyle.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\Components\CommentControl.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\Components\SystemControl.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\CompositeControls\CreateProjectControl.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\CompositeControls\DiagramComponentsControl.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\CompositeControls\DiagramLayerHistoryControl.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\CompositeControls\DiagramToolBarControl.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\Seperator\InsetSeperator.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Pages\CreateProjectPage.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Pages\InfoPage.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Pages\MainDiagramPage.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Pages\StartPage.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Windows\MainWindow.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\App.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\FlowDesign.UI_MarkupCompile.cache
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\FlowDesign.UI_MarkupCompile.lref
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\App.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\Buttons\ImageButton.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\Components\CommentControl.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\Components\SystemControl.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\CompositeControls\CreateProjectControl.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\CompositeControls\DiagramComponentsControl.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\CompositeControls\DiagramLayerHistoryControl.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\CompositeControls\DiagramToolBarControl.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\Seperator\InsetSeperator.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Pages\CreateProjectPage.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Pages\InfoPage.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Pages\MainDiagramPage.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Pages\StartPage.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Resources\Styles\ConnectorStyle.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Resources\Styles\LineMoveThumbStyle.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\Buttons\DiagramToolbarButton.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Resources\Styles\MoveThumbStyle.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Resources\Styles\ResizeThumbStyle.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\Items\ComponentToolBoxItem.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Controls\Components\ComponentContainerControl.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\Windows\MainWindow.baml
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\FlowDesign.UI.g.resources
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\FlowDesign.UI.Properties.Resources.resources
+D:\Dropbox\Projektarbeit\Für Schmidt\Source\FlowDesign.UI\obj\Debug\FlowDesign.UI.csproj.GenerateResource.Cache

@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="FlowDesign.UI.Controls.CompositeControls.DiagramToolBarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:buttons="clr-namespace:FlowDesign.UI.Controls.Buttons"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:FlowDesign.UI.Controls.CompositeControls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="1080"
+             d:DesignWidth="1920"
+             mc:Ignorable="d">
+    <Border BorderBrush="{DynamicResource DarkBackgroundFill}" BorderThickness="0 0 0 4">
+        <StackPanel MinHeight="55"
+                    Background="{DynamicResource DarkBackgroundLightFill}"
+      
+                    Orientation="Horizontal"
+                    Visibility="Visible">
+
+            <buttons:DiagramToolbarButton Width="250"
+                                          Margin="5"
+                                          BorderThickness="2"
+                                          Content="System-Umwelt Diagramm"
+                                          CreateDiagramCommand="{Binding CreateEnviromentDiagramCommand}"
+                                          Diagrams="{Binding EnviromentDiagrams}"
+                                          PopupHorizontalOffset="0"
+                                          PopupVerticalOffset="50" />
+
+            <buttons:DiagramToolbarButton Width="250"
+                                          Margin="5"
+                                          BorderThickness="2"
+                                          Content="Maskenprototyp"
+                                          CreateDiagramCommand="{Binding CreatePrototypeDiagramCommand}"
+                                          Diagrams="{Binding ProtoypeDiagrams}"
+                                          PopupHorizontalOffset="0"
+                                          PopupVerticalOffset="50" />
+
+            <buttons:DiagramToolbarButton Width="250"
+                                          Margin="5"
+                                          BorderThickness="2"
+                                          Content="Flow-Detail"
+                                          CreateDiagramCommand="{Binding CreateFlowViewDiagramCommand}"
+                                          Diagrams="{Binding FlowViewDiagrams}"
+                                          PopupHorizontalOffset="0"
+                                          PopupVerticalOffset="50" />
+        </StackPanel>
+    </Border>
+</UserControl>

@@ -1,0 +1,242 @@
+﻿<Page x:Class="FlowDesign.UI.Pages.MainDiagramPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:buttons="clr-namespace:FlowDesign.UI.Controls.Buttons"
+      xmlns:componentControls="clr-namespace:FlowDesign.UI.Controls.Components"
+      xmlns:componentViewModels="clr-namespace:FlowDesign.UI.ViewModels.ComponentViewModels"
+      xmlns:compositeControls="clr-namespace:FlowDesign.UI.Controls.CompositeControls"
+      xmlns:converter="clr-namespace:FlowDesign.UI.ValueConverter"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:FlowDesign.UI.Pages"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:models="clr-namespace:FlowDesign.Model.Components;assembly=FlowDesign.Model"
+      xmlns:prop="clr-namespace:FlowDesign.UI"
+      xmlns:systemEnvComponents="clr-namespace:FlowDesign.Model.Components.SystemEnvironment;assembly=FlowDesign.Model"
+      xmlns:viewModels="clr-namespace:FlowDesign.UI.ViewModels"
+      x:Name="page"
+      Title="MainDiagramPage"
+      d:DesignHeight="1080"
+      d:DesignWidth="1920"
+      Background="{DynamicResource DarkBackground}"
+      mc:Ignorable="d">
+    <Page.DataContext>
+        <viewModels:MainPageViewModel />
+    </Page.DataContext>
+
+    <Page.Resources>
+        <converter:BoolToVisibility x:Key="boolToVisibilityConverter" />
+    </Page.Resources>
+
+    <DockPanel>
+
+        <!--  Diagramm ToolBar oben  -->
+        <compositeControls:DiagramToolBarControl DockPanel.Dock="Top" />
+
+        <!--  Layer History rechts  -->
+        <Border BorderBrush="{DynamicResource DarkBackgroundFill}"
+                BorderThickness="4 0 0 0"
+                DockPanel.Dock="Right">
+            <compositeControls:DiagramLayerHistoryControl />
+        </Border>
+
+        <DockPanel DockPanel.Dock="Left">
+            <!--  Diagrammkomponenten links  -->
+            <compositeControls:DiagramComponentsControl AvailableComponents="{Binding AvailableComponents}" DockPanel.Dock="Top" />
+
+
+            <Border BorderBrush="{DynamicResource DarkBackgroundFill}" BorderThickness="0 0 4 0">
+                <DockPanel MinWidth="200">
+                    <TextBlock Margin="0 0 0 0"
+                               HorizontalAlignment="Stretch"
+                               Background="{DynamicResource BackgroundFill}"
+                               DockPanel.Dock="Top"
+                               Foreground="{DynamicResource ButtonText}"
+                               Padding="8"
+                               Text="Eigenschaften" />
+
+                    <StackPanel x:Name="propertiesStackPanel"
+                                Margin="0 10 0 0"
+                                DockPanel.Dock="Bottom"
+                                Visibility="{Binding IsPropertiesPanelVisible,
+                                                     Converter={StaticResource boolToVisibilityConverter}}" />
+
+                </DockPanel>
+            </Border>
+        </DockPanel>
+
+
+
+
+        <!--  Canvas um das Diagramm zu zeichen  -->
+
+        <DockPanel DockPanel.Dock="Right">
+            <Border BorderBrush="{DynamicResource DarkBackgroundFill}"
+                    BorderThickness="0 0 0 4"
+                    DockPanel.Dock="Top">
+                <TextBlock HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource TextBody}"
+                           Padding="5"
+                           Text="{Binding CurrentDiagram.Name}" />
+            </Border>
+
+            <ItemsControl x:Name="diagramCanvas"
+                          AllowDrop="True"
+                          DockPanel.Dock="Bottom"
+                          ItemsSource="{Binding CurrentComponents}"
+                          SnapsToDevicePixels="True">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas AllowDrop="True"
+                                Background="{DynamicResource WorkBackground}"
+                                ClipToBounds="True"
+                                Drop="Canvas_Drop"
+                                SnapsToDevicePixels="True" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemContainerStyle>
+                    <Style TargetType="ContentPresenter">
+                        <Setter Property="Canvas.Left" Value="{Binding Left}" />
+                        <Setter Property="Canvas.Top" Value="{Binding Top}" />
+                        <Setter Property="Width" Value="{Binding Width}" />
+                        <Setter Property="Height" Value="{Binding Height}" />
+                        <Setter Property="Canvas.ZIndex" Value="{Binding ZIndex}" />
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+                <ItemsControl.Resources>
+                    <converter:BoolToVisibility x:Key="boolToVisibilityConverter" />
+
+                    <DataTemplate DataType="{x:Type componentViewModels:CommentComponentViewModel}">
+                        <componentControls:ComponentContainerControl DataContext="{Binding}">
+                            <componentControls:CommentControl DataContext="{Binding}" IsHitTestVisible="False" />
+                        </componentControls:ComponentContainerControl>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type componentViewModels:SystemComponentViewModel}">
+                        <componentControls:ComponentContainerControl>
+                            <componentControls:SystemControl DataContext="{Binding}" IsHitTestVisible="False" />
+                        </componentControls:ComponentContainerControl>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type componentViewModels:ActorComponentViewModel}">
+                        <componentControls:ComponentContainerControl>
+                            <Image Height="100" Source="../Resources/Images/SystemEnviroment/actor.png" />
+                        </componentControls:ComponentContainerControl>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type componentViewModels:ResourceComponentViewModel}">
+                        <componentControls:ComponentContainerControl>
+                            <Image Height="100" Source="../Resources/Images/SystemEnviroment/resource.png" />
+                        </componentControls:ComponentContainerControl>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type componentViewModels:AdapterComponentViewModel}">
+                        <componentControls:ComponentContainerControl>
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <Rectangle Fill="Green" Opacity="0.5" />
+                            </Border>
+                        </componentControls:ComponentContainerControl>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type componentViewModels:MockupComponentViewModel}">
+                        <componentControls:ComponentContainerControl>
+                            <Image Source="{Binding ImagePath}" />
+                        </componentControls:ComponentContainerControl>
+                    </DataTemplate>
+
+
+                    <DataTemplate DataType="{x:Type componentViewModels:ConnectionViewModel}">
+                        <Grid>
+                            <Path Data="{Binding Geometry}"
+                                  MouseRightButtonDown="Path_MouseRightButtonDown"
+                                  Stroke="Black"
+                                  StrokeThickness="2" />
+
+                            <Path Data="{Binding GeometryEnd}"
+                                  Fill="Black"
+                                  IsHitTestVisible="False" />
+                        </Grid>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type componentViewModels:LineComponentViewModel}">
+                        <Grid>
+                            <Path Data="{Binding Geometry}"
+                                  MouseLeftButtonDown="Line_MouseLeftButtonDown"
+                                  Stroke="{Binding StrokeColor}"
+                                  StrokeThickness="4">
+
+                                <!--  ContextMenu  -->
+                                <Path.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Command="{Binding IncrementZIndexCommand}" Header="Ein Schritt nach vorne" />
+                                        <MenuItem Command="{Binding DecrementZIndexCommand}" Header="Ein Schritt nach hinten" />
+                                        <Separator />
+                                        <MenuItem Command="{Binding ParentViewModel.DeleteComponentCommand}"
+                                                  CommandParameter="{Binding DataContext,
+                                                                             RelativeSource={RelativeSource TemplatedParent}}"
+                                                  Header="Entfernen" />
+                                    </ContextMenu>
+                                </Path.ContextMenu>
+                            </Path>
+
+                            <Path Data="{Binding DirectionGeometry}"
+                                  Fill="{Binding StrokeColor}"
+                                  MouseLeftButtonDown="Line_MouseLeftButtonDown" />
+                        </Grid>
+
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type componentViewModels:LinePartComponentViewModel}">
+                        <componentControls:LineMoveThumb Width="15"
+                                                         Height="15"
+                                                         Background="{DynamicResource Main}"
+                                                         Style="{DynamicResource LineMoveThumbStyle}"
+                                                         Visibility="{Binding IsLinePartVisible,
+                                                                              Converter={StaticResource boolToVisibilityConverter}}" />
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type componentViewModels:SelfDelegationComponentViewModel}">
+                        <componentControls:ComponentContainerControl PreviewMouseDoubleClick="SelfDelegationComponent_PreviewMouseDoubleClick">
+                            <Image RenderOptions.BitmapScalingMode="Fant" Source="../Resources/Images/Prototype/selfDelegation.png" />
+                        </componentControls:ComponentContainerControl>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type componentViewModels:TextComponentViewModel}">
+                        <componentControls:ComponentContainerControl>
+                            <TextBlock HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Text="{Binding Text}" />
+                        </componentControls:ComponentContainerControl>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type componentViewModels:ModulComponentViewModel}">
+                        <componentControls:ComponentContainerControl PreviewMouseDoubleClick="ModulComponent_PreviewMouseDoubleClick">
+                            <Grid>
+                                <Ellipse Fill="White"
+                                         Stroke="Black"
+                                         StrokeThickness="1" />
+
+                                <TextBlock HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Text="{Binding Name}" />
+
+                            </Grid>
+                        </componentControls:ComponentContainerControl>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type componentViewModels:InputOutputComponentViewModel}">
+                        <componentControls:ComponentContainerControl>
+                            <TextBlock HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Text="Input/Output" />
+                        </componentControls:ComponentContainerControl>
+                    </DataTemplate>
+
+
+                </ItemsControl.Resources>
+            </ItemsControl>
+
+        </DockPanel>
+
+    </DockPanel>
+</Page>

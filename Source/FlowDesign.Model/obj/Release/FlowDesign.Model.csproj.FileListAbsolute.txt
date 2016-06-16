@@ -1,0 +1,5 @@
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Model\bin\Release\FlowDesign.Model.dll
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Model\bin\Release\FlowDesign.Model.pdb
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Model\obj\Release\FlowDesign.Model.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Model\obj\Release\FlowDesign.Model.dll
+C:\Users\Daniel\Documents\GitHub\FlowDesign\FlowDesign.Model\obj\Release\FlowDesign.Model.pdb

@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="{x:Type TextBox}">
+        <Setter Property="Height" Value="25" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="{DynamicResource DarkBackgroundLightFill}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextBody}" />
+        <Setter Property="Background" Value="{DynamicResource DarkBackgroundFill}" />
+    </Style>
+</ResourceDictionary>

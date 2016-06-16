@@ -1,0 +1,136 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:buttons="clr-namespace:FlowDesign.UI.Controls.Buttons"
+                    xmlns:local="clr-namespace:FlowDesign.UI"
+                    xmlns:models="clr-namespace:FlowDesign.Model;assembly=FlowDesign.Model">
+
+
+    <Style TargetType="{x:Type buttons:DiagramToolbarButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type buttons:DiagramToolbarButton}">
+                    <Border Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            TextBlock.FontSize="14"
+                            TextBlock.Foreground="{DynamicResource ButtonText}">
+                        <Grid Margin="{TemplateBinding ContentMargin}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40" />
+                                <ColumnDefinition Width="1" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="4" />
+                            </Grid.RowDefinitions>
+
+                            <Popup Name="PART_Popup"
+                                   Width="{Binding Path=Width,
+                                                   RelativeSource={RelativeSource TemplatedParent}}"
+                                   HorizontalOffset="{Binding PopupHorizontalOffset,
+                                                              RelativeSource={RelativeSource TemplatedParent}}"
+                                   IsOpen="{Binding IsChecked,
+                                                    RelativeSource={RelativeSource TemplatedParent}}"
+                                   Placement="Relative"
+                                   PlacementTarget="{Binding ElementName=border}"
+                                   PopupAnimation="Slide"
+                                   VerticalOffset="{Binding PopupVerticalOffset,
+                                                            RelativeSource={RelativeSource TemplatedParent}}">
+                                <Border Background="{DynamicResource BackgroundFill}"
+                                        BorderBrush="{DynamicResource BackgroundFill}"
+                                        BorderThickness="0 0 0 8">
+                                    <Border BorderBrush="LightGray" BorderThickness="0 0 0 1">
+                                        <DockPanel>
+                                            <DockPanel Margin="4 5 0 5" DockPanel.Dock="Top">
+                                                <Button Margin="5 0 5 0"
+                                                        Command="{Binding CreateDiagramCommand,
+                                                                          RelativeSource={RelativeSource TemplatedParent}}"
+                                                        CommandParameter="{Binding ElementName=PART_TextBoxDiagramName,
+                                                                                   Path=Text}"
+                                                        Content="Erstellen"
+                                                        DockPanel.Dock="Right" />
+                                                <TextBox x:Name="PART_TextBoxDiagramName" DockPanel.Dock="Left">
+                                                    <TextBox.InputBindings>
+                                                        <KeyBinding Key="Return"
+                                                                    Command="{Binding CreateDiagramCommand,
+                                                                                      RelativeSource={RelativeSource TemplatedParent}}"
+                                                                    CommandParameter="{Binding ElementName=PART_TextBoxDiagramName,
+                                                                                               Path=Text}" />
+                                                    </TextBox.InputBindings>
+                                                </TextBox>
+
+                                            </DockPanel>
+                                            <ItemsControl ItemsSource="{Binding Diagrams, RelativeSource={RelativeSource TemplatedParent}}">
+                                                <ItemsControl.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <StackPanel Margin="0 10 0 10" Orientation="Vertical">
+                                                            <StackPanel.Resources>
+                                                                <DataTemplate DataType="{x:Type models:Diagram}">
+                                                                    <Grid>
+                                                                        <Grid.ColumnDefinitions>
+                                                                            <ColumnDefinition Width="*" />
+                                                                            <ColumnDefinition Width="30" />
+                                                                        </Grid.ColumnDefinitions>
+                                                                        <buttons:ImageButton Grid.Column="0"
+                                                                                             Command="{Binding Path=DataContext.ChangeDiagramCommand,
+                                                                                                               RelativeSource={RelativeSource AncestorType=Border,
+                                                                                                                                              Mode=FindAncestor}}"
+                                                                                             CommandParameter="{Binding}"
+                                                                                             Content="{Binding Name}"
+                                                                                             ContentMargin="30 5 0 5"
+                                                                                             FontSize="14"
+                                                                                             FontWeight="Bold"
+                                                                                             Foreground="{DynamicResource ButtonText}"
+                                                                                             TextMargin="20 0 0 0" />
+
+                                                                        <Button Grid.Column="1"
+                                                                                Width="25"
+                                                                                Height="25"
+                                                                                Margin="0 0 5 0"
+                                                                                Command="{Binding Path=DataContext.DeleteDiagramCommand,
+                                                                                                  RelativeSource={RelativeSource AncestorType=Border,
+                                                                                                                                 Mode=FindAncestor}}"
+                                                                                CommandParameter="{Binding}"
+                                                                                Content="X" />
+                                                                    </Grid>
+                                                                </DataTemplate>
+                                                            </StackPanel.Resources>
+                                                        </StackPanel>
+                                                    </ItemsPanelTemplate>
+                                                </ItemsControl.ItemsPanel>
+                                            </ItemsControl>
+                                        </DockPanel>
+                                    </Border>
+                                </Border>
+                            </Popup>
+
+                            <Grid Grid.Column="0">
+                                <Rectangle Fill="{DynamicResource BackgroundFill}" />
+                                <Image Width="20"
+                                       Height="20"
+                                       Source="../../Resources/Icons/newDiagram.png" />
+                            </Grid>
+                            <Rectangle Grid.Column="1" Fill="{DynamicResource TextBody}" />
+                            <Grid Grid.Column="2">
+                                <Rectangle Fill="{DynamicResource BackgroundFill}" />
+                                <ContentPresenter Margin="10 0 10 0" VerticalAlignment="Center" />
+                            </Grid>
+
+                            <Rectangle Grid.Row="1"
+                                       Grid.ColumnSpan="3"
+                                       Fill="{DynamicResource HoverBlue}" />
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="PART_Popup" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

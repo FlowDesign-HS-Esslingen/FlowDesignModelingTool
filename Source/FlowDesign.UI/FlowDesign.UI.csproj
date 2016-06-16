@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0C016E1-A72A-48AC-A94E-C8D4A118183B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlowDesign.UI</RootNamespace>
+    <AssemblyName>FlowDesign.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>flowLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Commands\DelegateCommand.cs" />
+    <Compile Include="Controls\Buttons\DiagramToolbarButton.cs" />
+    <Compile Include="Controls\Buttons\ImageButton.cs" />
+    <Compile Include="Controls\Components\CommentControl.xaml.cs">
+      <DependentUpon>CommentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Components\ComponentContainerControl.cs" />
+    <Compile Include="Controls\Components\Connector.cs" />
+    <Compile Include="Controls\Components\LineMoveThumb.cs" />
+    <Compile Include="Controls\Components\MoveThumb.cs" />
+    <Compile Include="Controls\Components\ResizeThumb.cs" />
+    <Compile Include="Controls\Components\SystemControl.xaml.cs">
+      <DependentUpon>SystemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CompositeControls\CreateProjectControl.xaml.cs">
+      <DependentUpon>CreateProjectControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CompositeControls\DiagramComponentsControl.xaml.cs">
+      <DependentUpon>DiagramComponentsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CompositeControls\DiagramLayerHistoryControl.xaml.cs">
+      <DependentUpon>DiagramLayerHistoryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CompositeControls\DiagramToolBarControl.xaml.cs">
+      <DependentUpon>DiagramToolBarControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Items\ComponentToolBoxItem.cs" />
+    <Compile Include="Controls\Seperator\InsetSeperator.xaml.cs">
+      <DependentUpon>InsetSeperator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\DiagramDrawAreaHelper.cs" />
+    <Compile Include="Helper\PageManager.cs" />
+    <Compile Include="Helper\PropertiesUIBuilder.cs" />
+    <Compile Include="Helper\StatusBarHelper.cs" />
+    <Compile Include="Helper\UIServices.cs" />
+    <Compile Include="Pages\CreateProjectPage.xaml.cs">
+      <DependentUpon>CreateProjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InfoPage.xaml.cs">
+      <DependentUpon>InfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainDiagramPage.xaml.cs">
+      <DependentUpon>MainDiagramPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ObservableCollectionExtended.cs" />
+    <Compile Include="PropertyDescription.cs" />
+    <Compile Include="ViewModelFactories\ViewModelFactoryManager.cs" />
+    <Compile Include="ViewModelFactories\IViewModelFactory.cs" />
+    <Compile Include="ViewModelFactories\CommonComponentViewModelFactory.cs" />
+    <Compile Include="ViewModelFactories\FlowViewViewModelFactory.cs" />
+    <Compile Include="ViewModelFactories\PrototypeViewModelFactory.cs" />
+    <Compile Include="ViewModelFactories\SystemEnvViewModelFactory.cs" />
+    <Compile Include="ValueConverter\BoolToVisibility.cs" />
+    <Compile Include="ValueConverter\MultibindingToArray.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\FlowViewViewModels\InputOutputComponentViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\SystemEnviromentViewModels\ActorComponentViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\SystemEnviromentViewModels\AdapterComponentViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\CommonComponentViewModels\CommentComponentViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\ComponentViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\CommonComponentViewModels\ConnectionViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\PrototypeViewModels\DelegationComponentViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\CommonComponentViewModels\LineComponentViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\CommonComponentViewModels\LinePartComponentViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\PrototypeViewModels\MockupComponentViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\FlowViewViewModels\ModulComponentViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\SystemEnviromentViewModels\ResourceComponentViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\PrototypeViewModels\SelfDelegationComponentViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\CommonComponentViewModels\TextComponentViewModel.cs" />
+    <Compile Include="ViewModels\CreateProjectViewModel.cs" />
+    <Compile Include="ViewModels\InfoPageViewModel.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\StartPageViewModel.cs" />
+    <Compile Include="ViewModels\ComponentViewModels\SystemEnviromentViewModels\SystemComponentViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Page Include="Controls\Buttons\ImageButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Components\CommentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Components\SystemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CompositeControls\CreateProjectControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CompositeControls\DiagramComponentsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CompositeControls\DiagramLayerHistoryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CompositeControls\DiagramToolBarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Seperator\InsetSeperator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CreateProjectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\InfoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MainDiagramPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\StartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ColorThemes\DarkColorTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ColorThemes\DefaultColorTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ColorThemes\LightColorTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\ConnectorStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\LineMoveThumbStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\MenuBarStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Buttons\DiagramToolbarButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Styles\MoveThumbStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\ResizeThumbStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\TextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Items\ComponentToolBoxItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Components\ComponentContainerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlowDesign.DataAccess\FlowDesign.DataAccess.csproj">
+      <Project>{a23f0661-ef3b-4249-bcd4-0bc07d94a546}</Project>
+      <Name>FlowDesign.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlowDesign.Model\FlowDesign.Model.csproj">
+      <Project>{2a16dfaf-ac7d-404e-9a7b-e3e880debc11}</Project>
+      <Name>FlowDesign.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlowDesign.Service\FlowDesign.Service.csproj">
+      <Project>{aa0bd7a3-3359-418f-afe4-f7e5a7ac6389}</Project>
+      <Name>FlowDesign.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Logos\flowLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Logos\flowLogo_Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\createProject.png" />
+    <Resource Include="Resources\Icons\lastProject.png" />
+    <Resource Include="Resources\Icons\newDiagram.png" />
+    <Resource Include="Resources\Icons\openProject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\BlastProject.png" />
+    <Resource Include="Resources\Icons\BnewDiagram.png" />
+    <Resource Include="Resources\Icons\BnewProject.png" />
+    <Resource Include="Resources\Icons\BopenProject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Bsave.png" />
+    <Resource Include="Resources\Icons\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Beinstellung.png" />
+    <Resource Include="Resources\Icons\blueeinstellungen.png" />
+    <Resource Include="Resources\Icons\bluenewProject.png" />
+    <Resource Include="Resources\Icons\blueopen.png" />
+    <Resource Include="Resources\Icons\bluesave2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Bsave2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\SystemEnviroment\actor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\SystemEnviroment\resource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Test\TestMockup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\PaletteDunkel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Prototype\selfDelegation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\PaletteHell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="flowLogo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,84 @@
+﻿<Window x:Class="FlowDesign.UI.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:FlowDesign.UI"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="Flow Design"
+        Width="1024"
+        Height="768"
+        Icon="../Resources/Images/Logos/flowLogo_Small.png"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        mc:Ignorable="d">
+    <DockPanel LastChildFill="True">
+        <!--<Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Datei">
+                <MenuItem Header="_Beenden" />
+            </MenuItem>
+            <MenuItem Header="_Bearbeiten" />
+            <MenuItem Header="_Projekt" />
+            <MenuItem Header="_Ansicht" />
+            <MenuItem Header="_Hilfe" />
+        </Menu>-->
+
+        <ToolBarTray Background="{DynamicResource Info}" DockPanel.Dock="Top">
+            <ToolBar MaxHeight="30">
+                <Button Margin="10,0,0,0"
+                        Click="NewProject"
+                        ToolTip="Neues Projekt erstellen">
+                    <Image RenderOptions.BitmapScalingMode="Fant" Source="../Resources/Icons/BnewProject.png" />
+                </Button>
+                <Button Margin="10,0,0,0"
+                        Click="OpenProject"
+                        ToolTip="Projekt öffnen">
+                    <Image RenderOptions.BitmapScalingMode="Fant" Source="../Resources/Icons/BopenProject.png" />
+                </Button>
+                <Button Margin="10,0,0,0"
+                        Click="SaveProject"
+                        ToolTip="Speichern">
+                    <Image RenderOptions.BitmapScalingMode="Fant" Source="../Resources/Icons/Bsave2.png" />
+                </Button>
+
+            </ToolBar>
+
+            <ToolBar HorizontalAlignment="Right">
+                <TextBlock Background="Transparent" Padding="5">Farbschema</TextBlock>
+
+                <RadioButton Click="DarkColorTheme_Click"
+                             GroupName="ColorTheme"
+                             ToolTip="Wechseln zur dunklen Ansicht">
+                    <Image MaxHeight="20"
+                           RenderOptions.BitmapScalingMode="Fant"
+                           Source="../Resources/Icons/PaletteDunkel.png" />
+                </RadioButton>
+
+                <Separator />
+                <RadioButton Click="LightColorTheme_Click"
+                             GroupName="ColorTheme"
+                             ToolTip="Wechseln zur hellen Ansicht">
+                    <Image MaxHeight="20"
+                           RenderOptions.BitmapScalingMode="Fant"
+                           Source="../Resources/Icons/PaletteHell.png" />
+
+                </RadioButton>
+
+
+            </ToolBar>
+        </ToolBarTray>
+
+        <Rectangle Height="2"
+                   DockPanel.Dock="Top"
+                   Fill="Black" />
+        <StatusBar x:Name="statusBar"
+                   Background="{DynamicResource Info}"
+                   DockPanel.Dock="Bottom">
+            <StatusBarItem x:Name="statusItem" Content="Bereit" />
+        </StatusBar>
+
+        <Frame x:Name="mainFrame"
+               VerticalAlignment="Stretch"
+               DockPanel.Dock="Top"
+               NavigationUIVisibility="Hidden" />
+    </DockPanel>
+</Window>

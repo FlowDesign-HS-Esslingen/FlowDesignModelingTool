@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="FlowDesign.UI.Controls.CompositeControls.DiagramComponentsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:items="clr-namespace:FlowDesign.UI.Controls.Items"
+             xmlns:local="clr-namespace:FlowDesign.UI.Controls.CompositeControls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+    <Border BorderBrush="{DynamicResource DarkBackgroundFill}" BorderThickness="0 0 4 0">
+        <DockPanel MinWidth="200">
+            <TextBlock Margin="0 0 0 0"
+                       HorizontalAlignment="Stretch"
+                       Background="{DynamicResource BackgroundFill}"
+                       DockPanel.Dock="Top"
+                       Foreground="{DynamicResource ButtonText}"
+                       Padding="8"
+                       Text="Diagramm Komponenten" />
+            <ItemsControl Margin="5 0 5 0"
+                          DockPanel.Dock="Top"
+                          ItemsSource="{Binding AvailableComponents}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Margin="0 10 0 10" Orientation="Vertical">
+                            <StackPanel.Resources>
+                                <DataTemplate DataType="{x:Type system:String}">
+                                    <items:ComponentToolBoxItem MouseMove="ToolBoxItem_MouseMove" Text="{Binding}" />
+                                </DataTemplate>
+                            </StackPanel.Resources>
+                        </StackPanel>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </DockPanel>
+    </Border>
+</UserControl>

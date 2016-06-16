@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+    <!--  Hauptfarbe des Logos  -->
+    <SolidColorBrush x:Key="Main" Color="#394cff" />
+    <SolidColorBrush x:Key="Highlighted" Color="#2F3949" />
+
+    <!--  Dark Background Farben  -->
+    <SolidColorBrush x:Key="DarkBackground" Color="#3c3f41" />
+    <SolidColorBrush x:Key="DarkBackgroundFill" Color="#1E2120" />
+    <SolidColorBrush x:Key="DarkBackgroundLightFill" Color="#47484B" />
+
+    <SolidColorBrush x:Key="BackgroundFill" Color="#264d76" />
+    <SolidColorBrush x:Key="WorkBackground" Color="#C0C3C6" />
+
+    <!--  Mouse Hover  -->
+    <SolidColorBrush x:Key="HoverBlue" Color="#FF2F3949" />
+
+    <!--  Text Farben  -->
+    <SolidColorBrush x:Key="TextHeading" Color="#A0ACBF" />
+    <SolidColorBrush x:Key="TextBody" Color="#F3F3F4" />
+    <SolidColorBrush x:Key="ButtonText" Color="#F3F3F4" />
+
+    <!--  StatusBar Farben  -->
+    <SolidColorBrush x:Key="Info" Color="#A9000B6F" />
+    <SolidColorBrush x:Key="Success" Color="#A7175415" />
+    <SolidColorBrush x:Key="Danger" Color="#BC8A331F" />
+
+    <!--  Icons  -->
+    <BitmapImage x:Key="IconNewProject" UriSource="pack://application:,,/../Resources/Icons/createProject.png" />
+    <BitmapImage x:Key="IconOpenProject" UriSource="pack://application:,,/../Resources/Icons/openProject.png" />
+
+</ResourceDictionary>
